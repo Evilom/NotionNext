@@ -80,13 +80,15 @@ const Hero = props => {
 
         {/* 滚动按钮 */}
         <div
-          onClick={scrollToWrapper}
-          className='z-10 cursor-pointer w-full text-center py-4 text-3xl absolute bottom-10 text-white'>
-          <div className='opacity-70 animate-bounce text-xs'>
-            {siteConfig('HEXO_SHOW_START_READING', null, CONFIG) &&
+          onClick={() => {
+            window.scrollTo({ top: wrapperTop, behavior: 'smooth' })
+          }}
+          className='glassmorphism mt-12 border cursor-pointer w-40 text-center pt-4 pb-3 text-md text-white hover:bg-orange-600 duration-300 rounded-3xl z-40'>
+          <i className='animate-bounce fas fa-angle-double-down' />{' '}
+          <span>
+            {siteConfig('MATERY_SHOW_START_READING', null, CONFIG) &&
               locale.COMMON.START_READING}
-          </div>
-          <i className='opacity-70 animate-bounce fas fa-angle-down' />
+          </span>
         </div>
       </div>
 
