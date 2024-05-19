@@ -86,7 +86,7 @@ const Hero = props => {
           className='glassmorphism mt-12 border cursor-pointer w-40 text-center pt-4 pb-3 text-md text-white hover:bg-orange-600 duration-300 rounded-3xl z-40'>
           <i className='animate-bounce fas fa-angle-double-down' />{' '}
           <span>
-            {siteConfig('MATERY_SHOW_START_READING', null, CONFIG) &&
+            {siteConfig('HEXO_SHOW_START_READING', null, CONFIG) &&
               locale.COMMON.START_READING}
           </span>
         </div>
